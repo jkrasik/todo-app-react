@@ -36,7 +36,7 @@ class TodoApp extends Component {
     );
   }
 
-removeTask(e) {
+removeTask() {
   if(this.state.counter > 0){
     this.setState({
       items: this.state.items.splice(0,this.state.counter - 1),
@@ -46,7 +46,7 @@ removeTask(e) {
   }
 }
 
-cleanList(e) {
+cleanList() {
   this.setState({
     items: [],
     counter: 0
@@ -54,7 +54,7 @@ cleanList(e) {
   );
 }
 
-addItem(e) {
+addItem() {
     this.setState((prevState) => {
       return {
         items: prevState.items.concat({text: 'Task number ',
